@@ -5,23 +5,6 @@ import matplotlib.pyplot as plt
 
 sys.setrecursionlimit(20000)
 def func1(arr, low, high):
-    cache = []
-    cache_append = (low,high)
-    cache.append(cache_append)
-    while cache:
-        low, high = cache.pop()
-        if low<high:
-            pivot = func2(arr, low, high)
-            lower_piviot = pivot - 1
-            higher_pivot = pivot + 1
-            lower = (low,lower_piviot)
-            higher = (high, higher_pivot)
-            cache.append(lower)
-            cache.append(higher)
-    
-
-    
-
     if low < high:
         pi = func2(arr, low, high)
         func1(arr, low, pi-1)
